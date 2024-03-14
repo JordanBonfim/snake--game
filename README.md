@@ -12,6 +12,6 @@ Python 3.x
 Biblioteca pynput (instale com pip install pynput)
 Executando o Jogo
 Abra o terminal ou prompt de comando.
-Navegue até o diretório onde o arquivo snake_game.py está localizado.
-Execute o comando: python snake_game.py
+Navegue até o diretório onde o arquivo cobrinha3.0.py está localizado.
+Execute o comando: python cobrinha3.0.py
 Divirta-se jogando! 🐍🍎
