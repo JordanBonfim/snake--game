@@ -1,5 +1,4 @@
 # snake--game
-Snake game made in Python
 Jogo da Cobrinha
 Este é um jogo simples da cobrinha em Python. A cobrinha se move pelo tabuleiro e deve comer as frutas para crescer. Se a cobrinha colidir consigo mesma, o jogo termina.
 
