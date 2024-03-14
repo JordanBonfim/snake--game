@@ -91,7 +91,7 @@ def game(columns,rows):
 
     while True:
         time.sleep(game_speed)
-        os.system('cls')
+        os.system('clear') or None
         symbol = "▷"
         try:
             direction_aux = direction
@@ -106,7 +106,7 @@ def game(columns,rows):
         x_aux = x_player
         y_aux = y_player
 
-        print(direction)
+
         if(direction not in directions):
             direction = direction_aux    
         if direction == "\'w\'" or direction == "W":
@@ -136,10 +136,6 @@ def game(columns,rows):
             y_player=rows-1
 
     
-        print("x_fruit:",x_fruit)
-        print("y_fruit:",y_fruit)
-        print("x:",x_player)
-        print("y:",y_player)
 
         if (x_fruit==x_player and y_fruit==y_player):
         
@@ -183,7 +179,6 @@ def game(columns,rows):
                     print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
                     play_again()
                     board[y_player][x_player] = symbol
-                    anim.c
                     return continue_playing
                     
         board[y_player][x_player] = symbol
@@ -205,15 +200,13 @@ def game(columns,rows):
 def ouvir():
     # Inicia o listener para capturar as teclas
     with keyboard.Listener(on_press=on_press, on_release=on_release, suppress=True) as listener:
-        print("k")
-          # Inicia a animação
         listener.join()  # Aguarda até que o listener seja encerrado
 
 
-# Inicia a thread para a animação
-anim = threading.Thread(target=ouvir)
 
-anim.start()
+thread_listener = threading.Thread(target=ouvir)
+
+thread_listener.start()
 
 continue_playing = game(columns, rows)
 while continue_playing=="s" or continue_playing=="S":
